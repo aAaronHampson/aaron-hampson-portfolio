@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from './Hero.jsx'
 
 function AboutMe() {
@@ -14,7 +15,7 @@ function AboutMe() {
     const row = [];
 
     for (let i = 0; i < d; i++) {
-      row.push(0);
+      row.push(" ");
     }
 
     for (let i = 0; i < d; i++) {
@@ -28,8 +29,8 @@ function AboutMe() {
     // https://en.wikipedia.org/wiki/Midpoint_circle_algorithm
     while (x >= y) {
       for (const [j, k] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) {
-        grid[j * x + r][k * y + r] = 1;
-        grid[k * y + r][j * x + r] = 1;
+        grid[j * x + r][k * y + r] = "#";
+        grid[k * y + r][j * x + r] = "#";
       }
 
       if (p > 0) {
@@ -46,13 +47,20 @@ function AboutMe() {
   }
 
   function GetPhase() {
-    
+    // temp function, replace with API call later
+    // return percentage, and name
+    return [100, "Full"]
   }
 
+  function FillMoon(r, percentage, phase) {
+    return false;
+  }
   GenerateFullMoon(10);
 
   return (
-    <div></div>
+    <div className="about-container scroll-section">
+      
+    </div>
   )
 }
 
@@ -75,10 +83,65 @@ function Contact() {
 }
 
 function App() {
+  useEffect(() => {
+    // Source - https://stackoverflow.com/a/62392010
+    // Posted by user13084463
+    // Retrieved 2026-10-01, License - CC BY-SA 4.0
+
+    const sections = document.getElementsByClassName("scroll-section");
+
+    let curSection = 0;
+    let lastScrollTop = window.scrollY;
+    let isAutoScrolling = false;
+
+    const handleScroll = () => {
+      if (isAutoScrolling) return;
+
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > lastScrollTop) {
+        curSection++;
+      } else if (scrollTop < lastScrollTop) {
+        curSection--;
+      }
+
+      // clamp index
+      curSection = Math.max(
+        0,
+        Math.min(curSection, sections.length - 1)
+      );
+
+      lastScrollTop = scrollTop;
+
+      isAutoScrolling = true;
+
+      sections[curSection].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
+    const handleScrollEnd = () => {
+      if (isAutoScrolling) {
+        isAutoScrolling = false;
+        lastScrollTop = window.scrollY;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scrollend", handleScrollEnd);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scrollend", handleScrollEnd);
+    };
+  }, []);
+
   return (
     // using a react fragment allows formatting to work
     <>
       <Hero />
+      <AboutMe />
       <AboutMe />
     </>
   )

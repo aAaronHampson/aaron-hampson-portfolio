@@ -1,0 +1,8 @@
+.about-container {
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}

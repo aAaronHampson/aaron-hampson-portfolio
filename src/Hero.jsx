@@ -50,24 +50,22 @@ function Hero() {
   }, []);
 
   return (
-    <div className="hero-container">
-      <div className="hero-flex-container">
-        <div className="spacecraft-stats-container hero-col">
-          <p className="spacecraft-stats" id="v1">
-            // voyager_1<br></br>
-            v1.current_distance = {voyagerDistance} km
-          </p>
-        </div>
-        <div className="name-container hero-col">
-          <h1 className="name-header">Aaron Hampson</h1>
-          <h2 className="name-subheader">Full-Stack Developer</h2>
-        </div>
-        <div className="spacecraft-stats-container hero-col">
-          <p className="spacecraft-stats" id="p11">
-            // pioneer_11<br></br>
-            p11.current_distance = {pioneerDistance} km
-          </p>
-        </div>
+    <div className="hero-container scroll-section">
+      <div className="spacecraft-stats-container hero-col">
+        <p className="spacecraft-stats" id="v1">
+          // voyager_1<br></br>
+          v1.current_distance = {voyagerDistance} km
+        </p>
+      </div>
+      <div className="name-container hero-col">
+        <h1 className="name-header">Aaron Hampson</h1>
+        <h2 className="name-subheader">Full-Stack Developer</h2>
+      </div>
+      <div className="spacecraft-stats-container hero-col">
+        <p className="spacecraft-stats" id="p11">
+          // pioneer_11<br></br>
+          p11.current_distance = {pioneerDistance} km
+        </p>
       </div>
     </div>
   )
