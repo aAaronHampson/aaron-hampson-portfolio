@@ -4,7 +4,7 @@ import Hero from './Hero.jsx'
 function AboutMe() {
   // function for generating the moon
   // using midpoint circle algorithm
-  function GenerateFullMoon(r) {
+  function GenerateMoon(r) {
     // make radius odd
     if (r % 2 === 0) r++;
 
@@ -55,7 +55,7 @@ function AboutMe() {
   function FillMoon(r, percentage, phase) {
     return false;
   }
-  GenerateFullMoon(10);
+  GenerateMoon(10);
 
   return (
     <div className="about-container scroll-section">
