@@ -1,6 +1,7 @@
 .about-container {
-  width: 99vw;
-  height: 100vh;
+  width: 99svw;
+  min-height: 100svh;
+  height: fit-content;
   display: flex;
   background-color: white;
   border-top-left-radius: 50px;
@@ -112,4 +113,19 @@
 
 #powerautomate-icon {
   background-image: url("./assets/stack_icons/powerautomate.png");
+}
+
+@media (orientation: portrait)
+{
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-divider {
+    display: none;
+  }
+
+  .about-header {
+    font-size: 5rem;
+  }
 }
