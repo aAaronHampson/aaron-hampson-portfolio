@@ -23,7 +23,7 @@
 
 .about-header {
   color: #000;
-  font-size: 5rem;
+  font-size: 6rem;
   font-family: PlayfairDisplaySC;
   margin-block: 10px;
   text-decoration: underline;
@@ -70,6 +70,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  gap: 15px;
 }
 
 .experience-tech-stack-icon {
@@ -77,7 +78,12 @@
   width: 48px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-inline: 5px;
+}
+
+.experience-divider {
+  width: 85%;
+  margin-block: 30px;
+  margin-inline: 8%;
 }
 
 #git-icon {
@@ -90,4 +96,20 @@
 
 #unity-icon {
   background-image: url("./assets/stack_icons/unity.png");
+}
+
+#powerplatform-icon {
+  background-image: url("./assets/stack_icons/powerplatform.png");
+}
+
+#powerapps-icon {
+  background-image: url("./assets/stack_icons/powerapps.png");
+}
+
+#powerbi-icon {
+  background-image: url("./assets/stack_icons/powerbi.png");
+}
+
+#powerautomate-icon {
+  background-image: url("./assets/stack_icons/powerautomate.png");
 }

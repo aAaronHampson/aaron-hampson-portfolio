@@ -24,6 +24,24 @@ function AboutMe() {
           }
           stack={["git", "csharp", "unity"]}
         />
+        <ExperienceBlock
+          institution="OfficeLabs"
+          title="Power Platform Intern"
+          date="March 2024 - July 2024"
+          text={
+            <>
+              Independently developed tools for internal usage, including a document templating PowerApp, 
+              making use of all features of the Microsoft Power Platform suite.
+
+              <br />
+              <br />
+
+              Attended frequent meetings, and authored accurate, well-written handover documentation upon
+              reaching project completion.
+            </>
+          }
+          stack={["powerplatform", "powerapps", "powerbi", "powerautomate"]}
+        />
       </div>
       <div className="about-col about-divider">
         <img src={saturn} className="about-saturn-v"></img>
@@ -69,6 +87,7 @@ function ExperienceBlock({ institution, title, date, text, stack }) {
           />
         ))}
       </div>
+    <hr className="experience-divider"></hr>
     </div>
   );
 }
