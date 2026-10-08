@@ -58,3 +58,36 @@
   color: #636363;
   font-family: WorkSansItal;
 }
+
+.experience-p {
+  font-size: 1.2rem;
+  padding-inline: 50px;
+}
+
+.experience-tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.experience-tech-stack-icon {
+  height: 48px;
+  width: 48px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-inline: 5px;
+}
+
+#git-icon {
+  background-image: url("./assets/stack_icons/git.png");
+}
+
+#csharp-icon {
+  background-image: url("./assets/stack_icons/csharp.png");
+}
+
+#unity-icon {
+  background-image: url("./assets/stack_icons/unity.png");
+}
