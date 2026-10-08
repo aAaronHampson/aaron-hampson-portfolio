@@ -87,34 +87,6 @@
   margin-inline: 8%;
 }
 
-#git-icon {
-  background-image: url("./assets/stack_icons/git.png");
-}
-
-#csharp-icon {
-  background-image: url("./assets/stack_icons/csharp.png");
-}
-
-#unity-icon {
-  background-image: url("./assets/stack_icons/unity.png");
-}
-
-#powerplatform-icon {
-  background-image: url("./assets/stack_icons/powerplatform.png");
-}
-
-#powerapps-icon {
-  background-image: url("./assets/stack_icons/powerapps.png");
-}
-
-#powerbi-icon {
-  background-image: url("./assets/stack_icons/powerbi.png");
-}
-
-#powerautomate-icon {
-  background-image: url("./assets/stack_icons/powerautomate.png");
-}
-
 @media (orientation: portrait)
 {
   .about-container {

@@ -48,6 +48,39 @@ function AboutMe() {
       </div>
       <div className="about-col about-education">
         <h1 className="about-header">Education</h1>
+          <ExperienceBlock
+          institution="Cardiff University"
+          title="BSc Applied Software Engineering"
+          date="September 2025 - July 2028"
+          text={
+            <>
+              Worked with real industry clients to deliver technical solutions according their to business needs,
+              using project management techniques like Agile to effectively and efficiently deliver high-quality software.
+
+              <br />
+              <br />
+
+              Achieved a First-class in the first year of the course, and continuing to show strong understanding of software development principles.
+            </>
+          }
+          stack={["git", "kotlin", "java", "spring", "python", "flask", "jquery", "react", "mysql"]}
+        />
+                  <ExperienceBlock
+          institution="Exeter College"
+          title="T-Level Digital Production, Design, and Development"
+          date="September 2023 - July 2025"
+          text={
+            <>
+              Incorporated data analytics with a full-stack approach, delving into the world of data journalism, business analytics, and big data.
+
+              <br />
+              <br />
+
+              Achieved a Distinction for my T-Level classification, and engaged strongly with the technical placements I undertook.
+            </>
+          }
+          stack={["git", "python", "numpy", "pandas", "matplotlib", "flask", "mysql"]}
+        />
       </div>
     </div>
   )
