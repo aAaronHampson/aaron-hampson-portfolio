@@ -68,23 +68,23 @@
 }
 
 /* portrait */
-@media (orientation: portrait)
+@media (max-width: 1024px)
 {
   .hero-container {
-      background-image: url("./assets/imgs/portfolioherobgmobile.png");
-      flex-direction: column;
-      background-position-y: top;
-      background-size: contain;
+    background-image: url("./assets/imgs/portfolioherobgmobile.png");
+    flex-direction: column;
+    background-position-y: top;
+    background-size: contain;
   }
 
   #v1 {
-      align-self: flex-end;
-      padding-bottom: 5%;
+    align-self: flex-end;
+    padding-bottom: 5%;
   }
 
   #p11 {
-      align-self: flex-start;
-      padding-top: 5%;
+    align-self: flex-start;
+    padding-top: 5%;
   }
 }
 
