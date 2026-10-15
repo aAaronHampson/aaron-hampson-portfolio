@@ -1,4 +1,4 @@
-import saturn from './assets/imgs/saturnv.png';
+import saturn from '../assets/imgs/saturnv.png';
 
 function AboutMe() {
   return (
