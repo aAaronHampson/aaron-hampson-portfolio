@@ -45,7 +45,7 @@ function Projects() {
     //
     document.getElementsByClassName("project-name")[0].innerHTML = currentProject.name;
     document.getElementsByClassName("project-description")[0].innerHTML = currentProject.description;
-    document.getElementsByClassName("project-number")[0].innerHTML = `// ${currentProjectIdx + 1} / ${projects.length}`;
+    document.getElementsByClassName("project-number")[0].innerHTML = `// 0${currentProjectIdx + 1} / 0${projects.length}`;
     
     // to handle images, first clear them
     const carousel = document.getElementsByClassName("project-image-carousel")[0]; 
@@ -58,12 +58,11 @@ function Projects() {
       carousel.appendChild(child);
     };
     setCurrentImageIdx(0);
-    document.getElementsByClassName("project-large-image")[0].src = `project_imgs/${currentProjectIdx}_0.png`;
   }, [currentProjectIdx]);
 
   useEffect(() => {
     document.getElementsByClassName("project-large-image")[0].src = `project_imgs/${currentProjectIdx}_${currentImageIdx}.png`;
-  }, [currentImageIdx]);
+  }, [currentImageIdx, currentProjectIdx]);
 
   function SetImage(idx) {
     console.log("setting image");
@@ -87,23 +86,23 @@ function Projects() {
 
   return (
     <div className="project-container scroll-section">
-      <button className="project-button" id="previous-project" onClick={PrevProject}>PREVIOUS</button>
+      <button className="project-button" id="previous-project" onClick={PrevProject}>←</button>
       <div className="project">
-        <div className="project-col">
+        <div className="project-col project-txt-col">
           <h1 className="project-number"></h1>
           <h1 className="project-name"></h1>
           <p className="project-description">
 
           </p>
         </div>
-        <div className="project-col">
+        <div className="project-col project-img-col">
           <img className="project-large-image"/>
           <div className="project-image-carousel">
 
           </div>
         </div>
       </div>
-      <button className="project-button" id="previous-project" onClick={NextProject}>NEXT</button>
+      <button className="project-button" id="previous-project" onClick={NextProject}>→</button>
     </div>
   )
 }
