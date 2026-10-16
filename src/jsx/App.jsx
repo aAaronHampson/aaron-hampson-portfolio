@@ -3,9 +3,17 @@ import Hero from './Hero.jsx';
 import AboutMe from './AboutMe.jsx';
 import Projects from './Projects.jsx';
 
-function Contact() {
+function Footer() {
   return (
-    <div></div>
+    <div className="contact scroll-section">
+      <h2 className="footer-catcher">Like what you see?</h2>
+      <h1 className="footer-header">Contact Me</h1>
+      <div className="contact-options">
+        <button className="email"></button>
+        <button className="linkedin"></button>
+        <button className="github"></button>
+      </div>
+    </div>
   )
 }
 
@@ -16,6 +24,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Projects />
+      <Footer />
     </>
   )
 }
