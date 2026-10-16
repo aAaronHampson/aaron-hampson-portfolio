@@ -23,6 +23,30 @@
   src: url("../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
 }
 
+/* Generated this with the following tool:
+https://webcode.tools/css-generator/keyframe-animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;

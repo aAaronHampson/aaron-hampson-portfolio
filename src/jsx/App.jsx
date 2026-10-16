@@ -86,7 +86,8 @@ function Projects() {
 
   return (
     <div className="project-container scroll-section">
-      <button className="project-button" id="previous-project" onClick={PrevProject}>←</button>
+      <button className="project-button project-button-portrait" onClick={PrevProject}>↑</button>
+      <button className="project-button project-button-landscape" onClick={PrevProject}>←</button>
       <div className="project">
         <div className="project-col project-txt-col">
           <h1 className="project-number"></h1>
@@ -102,7 +103,8 @@ function Projects() {
           </div>
         </div>
       </div>
-      <button className="project-button" id="previous-project" onClick={NextProject}>→</button>
+      <button className="project-button project-button-landscape" onClick={NextProject}>→</button>
+      <button className="project-button project-button-portrait" onClick={NextProject}>↓</button>
     </div>
   )
 }
